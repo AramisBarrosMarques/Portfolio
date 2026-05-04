@@ -1,0 +1,584 @@
+/* Importando fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@700&display=swap');
+
+* {
+  margin: 0; /*remove margens padrao que o navegador impoe*/
+  padding: 0; /* remove espaçamento interno padrão*/
+  box-sizing: border-box; /*faz com que largura/altura dos elementos
+                             considerem o padding e a borda. */
+}
+
+
+
+
+p a {
+  font-family: inherit;   /* herda a mesma fonte do <p> */
+  text-decoration: none;  /* tira o sublinhado padrão */
+  font-style: inherit;    /* mantém itálico se o <p> tiver */
+}
+
+
+/* Corpo */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111; /* preto suave */
+  color: #eee; /* texto claro */
+  line-height: 1.6;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #9c27b0; /* roxo principal */
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  animation: aparecer 1.5s ease forwards;
+  z-index: 1000;
+}
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+.logo h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.logo p {
+  font-size: 14px;
+  color: #9c27b0;
+  font-style: italic;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #9c27b0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d05ce3; /* tom mais claro no hover */
+}
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.foto {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.foto img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+.foto img:hover {
+  transform: scale(1.05);    /* zoom suave no hover */
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+.diplomas {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.diplomas img {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+.diplomas img:hover {
+  transform: scale(1.05);    /* zoom suave no hover */
+}
+
+.legenda {
+  margin-top: 40px;   /* aumenta espaço embaixo */
+  text-align: right;  /* legenda alinhada à direita */
+  font-size: 14px;
+  color: #ccc;
+
+
+
+
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.social-links {
+  display: flex;
+  flex-direction: column; /* empilha os botões */
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 0;   /* remove espaço extra */
+  padding: 0;         /* evita fundo cinza se tiver padding */
+  background: none;   /* tira qualquer cor de fundo */
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: #1e1e1e; /* fundo escuro */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.social-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Conteúdo */
+.conteudo {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+section {
+  min-height: auto;
+  padding: 40px;
+  background-color: #222; /* cinza escuro pra contraste */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  scroll-margin-top: 80px;
+}
+
+/* Hierarquia tipográfica */
+section h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+}
+
+.habilidades-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+.hard-skills, .soft-skills {
+  flex: 1;
+}
+
+.hard-skills h2, .soft-skills h2 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hard-skills ul, .soft-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hard-skills li, .soft-skills li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+}
+
+.hard-skills img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.hard-skills img:hover {
+  transform: scale(1.2); /* animação suave ao passar o mouse */
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .habilidades-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in geral */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+/* Delay diferente para elementos internos */
+.fade-in h1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in p {
+  animation-delay: 0.5s;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #111, #222);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #9c27b0;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #eee;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #9c27b0;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #d05ce3;
+}
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+p {
+  font-size: 16px;               /* tamanho confortável */
+  line-height: 1.6;              /* espaçamento entre linhas */
+  color: #ddd;                   /* cinza claro pra fundo escuro */
+  font-style: italic;            /* estilo elegante */
+  background: rgba(255,255,255,0.05); /* leve fundo translúcido */
+  padding: 12px 16px;            /* respiro interno */
+  border-left: 4px solid #ff4d4d; /* detalhe visual na lateral */
+  border-radius: 8px;
+  margin: 20px auto;             /* espaço em cima/baixo e centraliza */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+p:hover {
+  transform: translateY(-3px);   /* sobe levemente no hover */
+  background: rgba(255,255,255,0.1);
+}
+
+a{
+  color: #9c27b0;
+}
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+#projetos{
+  display: inline-block;
+  align-items: column;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+.habilidades-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.hard-skills, .soft-skills {
+  flex: 1;
+}
+
+.hard-skills h2, .soft-skills h2 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hard-skills ul, .soft-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hard-skills li, .soft-skills li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+}
+
+.hard-skills img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.hard-skills img:hover {
+  transform: scale(1.2); /* animação suave ao passar o mouse */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .habilidades-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

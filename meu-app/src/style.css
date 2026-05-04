@@ -1,0 +1,135 @@
+body {
+  background-color: #0f0f0f;
+  font-family: Arial, sans-serif;
+  color: aliceblue;
+}
+
+#box{
+  display: flex; /*o mais importante, deixa todos em forma de caixa*/
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /*centraliza vertical*/
+  flex-direction: column; /*deixa todos em forma de coluna*/
+  margin-top: 60px; /* empurra pra baixo */
+  opacity: 0; /* começa invisível */
+  transform: translateY(20px); /* levemente abaixo */
+  
+  animation: aparecer 3s ease forwards;
+
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1; /* totalmente visível */
+    transform: translateY(0); /* volta pro lugar */
+  }
+}
+
+#rs{
+  display: flex; /*o mais importante, deixa todos em forma de caixa*/
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /*centraliza vertical*/
+  flex-direction: column; /*deixa todos em forma de coluna*/
+  margin-top: 60px; /* empurra pra baixo */
+  color: antiquewhite;
+  opacity: 0; /* começa invisível */
+  transform: translateY(20px); /* levemente abaixo */
+  
+  animation: aparecer 3s ease forwards;
+
+}
+
+h2{
+  text-align: center; /* ou right se quiser mais pra direita */
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 6px;
+}
+
+
+button {
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #222;
+}
+
+/*flex-start → esquerda
+flex-end → direita
+space-between → espaço entre
+space-around → espaço ao redor*/
+
+
+/*
+📦 🔹 1. block
+display: block;
+Ocupa toda a largura
+Quebra linha automaticamente
+
+👉 Ex:
+
+<div>
+<h1>
+<p>
+📏 🔹 2. inline
+display: inline;
+Fica na mesma linha
+Não aceita width/height
+
+👉 Ex:
+
+<span>
+<a>
+🔲 🔹 3. inline-block
+display: inline-block;
+Fica na mesma linha
+MAS aceita largura e altura
+
+👉 Muito usado pra botões
+
+💪 🔹 4. flex
+display: flex;
+Layout flexível (o mais usado hoje)
+Permite alinhar com:
+justify-content
+align-items
+
+👉 Perfeito pra layouts modernos
+
+🧩 🔹 5. grid
+display: grid;
+Layout em grade (linhas e colunas)
+Mais poderoso que flex em layouts complexos
+🚫 🔹 6. none
+display: none;
+Esconde completamente o elemento
+Ele “some” da página
+📚 🔹 7. inline-flex
+display: inline-flex;
+Igual ao flex
+Mas fica na mesma linha
+📊 🔹 8. inline-grid
+display: inline-grid;
+Igual ao grid
+Mas inline
+🧱 🔹 9. list-item
+display: list-item;
+Usado em listas (<li>)
+Mostra marcadores (bolinha)
+📦 🔹 10. contents
+display: contents;
+Remove a “caixa” do elemento
+Só mantém os filhos
+
+(uso mais avançado*/
