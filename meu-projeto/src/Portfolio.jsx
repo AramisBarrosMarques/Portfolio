@@ -123,7 +123,7 @@ export default function Portfolio() {
 
           <a href="https://wa.me/5581999999999" target="_blank" rel="noopener noreferrer" className="social-btn">
           <img src={whatsappIcon} alt="WhatsApp" />
-          <span>whatssap</span>
+          <span>whatsapp</span>
           </a>
 
         </section>
